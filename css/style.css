@@ -2,7 +2,7 @@
 
 
 @font-face {
-   font-family: "CalSans";
+   font-family: "Cal Sans";
    font-display: swap;
    src: url(../fonts/webfonts/CalSans-SemiBold.woff2) format("woff2"), url(../fonts/webfonts/CalSans-SemiBold.woff) format("woff");
    font-weight: 400;
@@ -15,7 +15,7 @@ body {
    color: #666666;
 }
 
-.wrapper{
+.wrapper {
    overflow: hidden;
    min-height: 100%;
    position: relative;
@@ -27,7 +27,7 @@ body {
    flex: 1 1 auto;
 }
 
-[class*="__container"]{
+[class*="__container"] {
    max-width: 1230px;
    margin: 0 auto;
    padding: 0 15px;
@@ -71,7 +71,7 @@ body {
    transition: 0.400ms;
 }
 
-.menu__link:hover::before{
+.menu__link:hover::before {
    content: "";
    width: 100%;
    height: 2px;
@@ -91,27 +91,83 @@ body {
 }
 
 .main__content {
+   /* flex: 0 1 50%; */
    align-self: flex-end;
    padding-bottom: 62px;
    padding-right: 20px;
+   padding-top: 120px;
 }
 
-.main__title {}
+.main__title {
+      font-family: 'Cal Sans';
+      font-weight: 600;
+      font-size: 56px;
+      line-height: 67px;
+      color: #121212;
+}
 
-.main__text {}
+.main__title:not(:last-child){
+   margin-bottom: 16px;
+}
 
-.main__actions {}
+.main__title span{
+   color: #FF6428;
+}
 
-.actions-main {}
+.main__text {
+   font-weight: 500;
+   line-height: 24px;
+   max-width: 420px;
+}
 
-.actions-main__button {}
+.main__text:not(:last-child){
+   margin-bottom: 33px;
+}
+
+.actions-main {
+   display: flex;
+   align-items: center;
+}
+
+.actions-main__button{
+   padding: 18.5px 48px;
+   background: #FF6428;
+   border-radius: 40px;
+   color: #fff;
+   font-weight: 600;
+   line-height: 28px;
+}
+
+.actions-main__button:not(:last-child){
+      margin-right: 40px;
+}
 
 .actions-main__icon {}
 
+.actions-main__icon:not(:last-child){
+   margin-right: 28px;
+}
+
+.main__decor {
+   /* flex: 0 1 50%; */
+}
+
+
 .main__decor {}
 
-.decor-main {}
+.main__img {
+   margin-right: -135px;
+   position: relative;
+   display: inline-block;
+}
 
-.decor-main__img {}
-
+.main__img::after{
+   content: url(../img/main/decor.svg);
+   position: absolute;
+   width: 80px;
+   height: 80px;
+   right: 36.6%;
+   bottom: 0;
+   transform: translate(0, 50%);
+}
 
